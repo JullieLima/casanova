@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chá de Casa Nova</title>
+
+  <style>
+    /* Define as cores da paleta */
+    :root {
+      --cor-terrosa-claro: #D6C7B4;
+      --cor-terrosa-escuro: #7A644E;
+      --cor-lilas: #B49FBF;
+    }
+    
+    /* Define as fontes */
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    /* Define estilos gerais para o site */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--cor-terrosa-claro);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Define estilos para os títulos */
+    h1 {
+      color: var(--cor-terrosa-escuro);
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    h2 {
+      color: var(--cor-lilas);
+    }
+    
+    /* Define estilos para o formulário de confirmação de presença */
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    
+    button {
+      background-color: var(--cor-lilas);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    /* Define estilos para a lista de presentes */
+    details {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+        /* Define estilos para o texto de abertura e agradecimento */
+        .texto-abertura, .texto-agradecimento {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Define estilos para o campo de localização */
+    .campo-localizacao {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Define estilos para o campo de localização */
+    .listadepresentes {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <style>
+    /* Define estilos para o formulário de confirmação de presença */
+    form {
+      background-color: #fff;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input, textarea {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    button[type="submit"] {
+      background-color: #8B5A2B;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #654321;
+    }
+    
+    /* Define a paleta de cores */
+    :root {
+      --terracota: #8B5A2B;
+      --marrom-claro: #A0522D;
+      --bege: #F5DEB3;
+      --lilas: #9370DB;
+      --cinza-claro: #D3D3D3;
+    }
+    
+    /* Define estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--terracota);
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+      margin-top: 0;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px;
+      background-color: var(--lilas);
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    summary:hover {
+      background-color: #9370DB;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Chá de Casa Nova</h1>
+    
+    <div class="texto-abertura">
+      <p>Olá amigos e familiares!</p>
+      <p>Estamos muito felizes em convidá-los para o nosso chá de casa nova, que acontecerá no dia XX de XXXX, a partir das XXh.</p>
+      <p>Esperamos contar com a presença de todos vocês nesse momento especial em nossas vidas!</p>
+    </div>
+    
+    <div class="campo-localizacao">
+      <h2>Localização</h2>
+      <p>A nossa nova casa fica localizada na Rua X, nº Y, no bairro Z.</p>
+      <p>Para quem vem de carro, há estacionamento gratuito na rua.</p>
+    </div>
+    <br>
+    <div class="listadepresentes">
+        <h2>Lista de presentes</h2>
+    <details>
+      <summary>Área de serviços</summary>
+      <ul>
+        <li>Aspirador de pó</li>
+        <li>Baldes de plástico</li>
+        <li>Cesto para prendedores</li>
+        <li>Cesto para roupas sujas</li>
+        <li>Desentupidor de pia</li>
+        <li>Dosador para sabão em pó</li>
+        <li>Espanador de pó</li>
+        <li>Luvas de borracha</li>
+        <li>Pá de lixo</li>
+        <li>Panos de chão</li>
+        <li>Porta-sabão</li>
+        <li>Pregadores de roupa</li>
+        <li>Protetor para tábua de passar</li>
+        <li>Protetor para ferro de passar roupa</li>
+        <li>Rodo</li>
+        <li>Tábua de passar roupa</li>
+        <li>Vassoura</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Banheiro</summary>
+      <ul>
+        <li>Baldes de plástico</li>
+        <li>Capacho</li>
+        <li>Cesto para roupa</li>
+        <li>Desentupidor de pia</li>
+        <li>Escova para vaso sanitário</li>
+        <li>Lixeira</li>
+        <li>Porta-escova de dentes</li>
+        <li>Porta-sabonete</li>
+        <li>Tapete antiaderente para box</li>
+        <li>Toalha de banho</li>
+        <li>Toalha de mãos</li>
+        <li>Toalha de rosto</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Cozinha</summary>
+      <ul>
+        <li>Abridor de garrafas</li>
+        <li>Abridor de latas</li>
+        <li>Açucareiro</li>
+        <li>Afiador de facas</li>
+        <li>Assadeira</li>
+        <li>Avental</li>
+        <li>Bandejas</li>
+        <li>Batedor de ovos</li>
+        <li>Chaleira</li>
+        <li>Coador de café</li>
+        <li>Colher de sorvete</li>
+        <li>Colheres de pau</li>
+        <li>Colheres de silicone</li>
+        <li>Concha para molhos</li>
+        <li>Copo medidor</li>
+        <li>Cortador de pizza</li>
+        <li>Descanso de panela</li>
+        <li>Descascador de legumes</li>
+        <li>Escorredor de arroz</li>
+        <li>Escorredor de louças</li>
+        <li>Escorredor de macarrão</li>
+        <li>Escumadeira</li>
+        <li>Espremedor de alho</li>
+        <li>Forma de gelo</li>
+        <li>Frigideira</li>
+        <li>Jogo de copos</li>
+        <li>Jogo de panelas</li>
+        <li>Jogo de talheres</li>
+        <li>Jogo de xícaras</li>
+        <li>Luva térmica</li>
+        <li>Lixeira para pia</li>
+        <li>Paliteiro</li>
+        <li>Pegador de massas</li>
+        <li>Pegador de saladas</li>
+        <li>Petisqueira</li>
+        <li>Pincel culinário</li>
+        <li>Potes</li>
+        <li>Pratos</li>
+        <li>Pratos para sobremesa</li>
+        <li>Porta-guardanapos</li>
+        <li>Porta-temperos</li>
+        <li>Puxa saco</li>
+        <li>Ralador de queijos</li>
+        <li>Rodo para pia</li>
+        <li>Rolo de abrir massas</li>
+        <li>Saladeira</li>
+        <li>Saleiro e pimenteiro</li>
+        <li>Tábua para queijos</li>
+        <li>Tábua plástica</li>
+        <li>Tesoura de cozinha</li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>Ferramentas</summary>
+      <ul>
+        <li>Adaptadores de tomada</li>
+        <li>Alicate</li>
+        <li>Caixa de ferramentas</li>
+        <li>Chave de fenda</li>
+        <li>Chave Phillips</li>
+        <li>Extensão</li>
+        <li>Fita dupla face</li>
+        <li>Lâmpadas</li>
+        <li>Parafusos e pregos</li>
+        <li>Martelo</li>
+        <li>Tesoura</li>
+        <li>Trena</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Quarto</summary>
+      <ul>
+        <li>Abajur</li>
+        <li>Almofadas</li>
+        <li>Cabides</li>
+        <li>Cabideiro</li>
+        <li>Cobertor</li>
+        <li>Espelho</li>
+        <li>Jogo de cama</li>
+        <li>Lençol</li>
+        <li>Protetor de colchão</li>
+        <li>Protetor de travesseiro</li>
+        <li>Roupões</li>
+        <li>Saia para cama box</li>
+        <li>Sapateira</li>
+        <li>Travesseiros</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Quer contribuir de forma diferente?</summary>
+      <ul>
+        <li>CHAVE PIX: <strong>102.951.766-52</strong></li>
+        <li>NOME: Jullie Anne Morais Lima</li>
+        <li>INSTITUIÇÃO: Nu Pagamentos</li>
+      </ul>
+    </details>
+
+    </div><br>
+    
+    <form>
+        <h2>Confirmação de Presença</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+        <label for="presenca">Presença:</label>
+        <select id="presenca" name="presenca">
+          <option value="presente">Estarei presente</option>
+          <option value="ausente">Não vou comparecer</option>
+        </select>
+        <br><br> <br>
+        <button type="submit">Confirmar Presença</button>
+      </form>
+      
+  </div>
+
+<script>
+  /* Adiciona um evento de clique no botão de confirmação de presença */
+  
+  const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const nome = document.querySelector('#nome').value;
+  const presenca = document.querySelector('#presenca').value;
+  let mensagem = '';
+  if (presenca === 'presente') {
+    mensagem = `Olá ${nome}, obrigado por confirmar sua presença! Mal podemos esperar para vê-lo no evento.`;
+  } else {
+    mensagem = `Olá ${nome}, sentimos muito que você não possa comparecer ao evento. Esperamos vê-lo em outra oportunidade.`;
+  }
+  alert(mensagem);
+  form.reset();
+});
+
+</script>
+</body>
+</html>
